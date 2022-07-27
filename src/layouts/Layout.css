@@ -1,3 +1,5 @@
+@import 'normalize.css/normalize.css';
+
 :root {
     --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
     --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -32,14 +34,11 @@ body {
         Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-@import 'npm:normalize.css/normalize.css';
-
 
 body, html {
     color: #cccccc;
     background-color: #091c5e;
 }
-
 
 a:hover {
     color: #939aff;
