@@ -1,34 +1,14 @@
 {
-  "name": "asabrancapharma.github.io",
-  "description": "Asa Branca Pharma Landpage",
-  "version": "1.0.0",
-  "source": "src/index.html",
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/asabrancapharma/asabrancapharma.github.io.git"
-  },
-  "keywords": [
-    "Landpage",
-    "Drugstore",
-    "Farmacia",
-    "Pharmacy"
-  ],
-  "author": "Leonardo de Albuquerque Gouveia <leogouv@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/asabrancapharma/asabrancapharma.github.io/issues"
-  },
-  "homepage": "https://github.com/asabrancapharma/asabrancapharma.github.io#readme",
   "devDependencies": {
-    "parcel": "^2.6.2"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
+    "astro": "^1.0.0-rc.1"
   }
 }
