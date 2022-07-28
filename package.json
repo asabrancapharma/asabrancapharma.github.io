@@ -12,6 +12,8 @@
     "astro": "^1.0.0-rc.1"
   },
   "dependencies": {
+    "@julian_cataldo/astro-seo": "^0.12.1",
+    "astro-imagetools": "^0.6.10",
     "normalize.css": "^8.0.1"
   }
 }
