@@ -3,5 +3,10 @@ import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [astroImageTools]
+    integrations: [astroImageTools],
+    vite: {
+        ssr: {
+            external: ['svgo']
+        }
+    }
 });

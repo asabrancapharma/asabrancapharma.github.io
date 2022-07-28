@@ -1,16 +1,22 @@
 ---
+import { Icon } from "astro-icon";
+
 export interface Props {
-	icon: string;
+	icon: any;
 	href: string;
 	title: string;
 	iconAlt: string;
+	iconType?: string;
+	[key: string]: any;
 }
-const { icon, href, title, iconAlt } = Astro.props;
+const { icon, href, title, iconAlt, iconType = 'img', ...other } = Astro.props;
 ---
 
 <li class="Card row">
-	<img class="icon" src={icon} alt={iconAlt} />
-	<a href={href}>{title}</a>
+	{iconType==="img" ?
+	<img class="icon" src={icon} alt={iconAlt} /> :
+	<Icon name={icon} class="icon" />}
+	<a href={href} {...other}>{title}</a>
 </li>
 <style>
 	:root {
@@ -43,7 +49,6 @@ const { icon, href, title, iconAlt } = Astro.props;
 	}
 
 
-
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -62,7 +67,18 @@ const { icon, href, title, iconAlt } = Astro.props;
 		padding: 1em 1.3em;
 		border-radius: 0.35rem;
 
-		background-color: white;
+		background-color: #ffffff;
 		opacity: 0.8;
+	}
+
+	[astro-icon] {
+
+		fill: #ffffff;
+	}
+
+	[astro-icon="mdi:instagram"] {
+		fill: #ffffff;
+		height: 55px;
+		width: 55px;
 	}
 </style>
