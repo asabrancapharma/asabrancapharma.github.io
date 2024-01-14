@@ -1,24 +1,4 @@
----
-import SEO from '@julian_cataldo/astro-seo/SEO.astro';
-import "./Layout.css";
-import asaBrancaLogoSEO from './asabrancapharma-logo3.png';
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props as Props;
----
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://asabrancapharma.com.br/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://asabrancapharma.com.br/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://asabrancapharma.com.br/apple-touch-icon-114x114.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://asabrancapharma.com.br/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://asabrancapharma.com.br/apple-touch-icon-144x144.png" />
@@ -38,21 +18,3 @@ const { title } = Astro.props as Props;
 <meta name="msapplication-square150x150logo" content="https://asabrancapharma.com.br/mstile-150x150.png" />
 <meta name="msapplication-wide310x150logo" content="https://asabrancapharma.com.br/mstile-310x150.png" />
 <meta name="msapplication-square310x310logo" content="https://asabrancapharma.com.br/mstile-310x310.png" />
-
-	<title>{title}</title>
-
-	<SEO image={asaBrancaLogoSEO} title={'Asa Branca Pharma - Conheça nossa Farmácia em Cajazeiras/PB'}
-		description="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
-		siteName="Asa Branca Pharma" />
-
-
-</head>
-
-<body>
-	<slot />
-</body>
-
-</html>
-<style>
-
-</style>
