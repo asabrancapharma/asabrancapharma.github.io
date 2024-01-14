@@ -1,9 +1,9 @@
 ---
-import SEO from '@julian_cataldo/astro-seo/SEO.astro';
+import SEO from "@julian_cataldo/astro-seo/SEO.astro";
 import "./Layout.css";
-import asaBrancaLogoSEO from './asabrancapharma-logo3.png';
+import asaBrancaLogoSEO from "./asabrancapharma-logo3.png";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
@@ -11,48 +11,115 @@ const { title } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://asabrancapharma.com.br/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://asabrancapharma.com.br/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://asabrancapharma.com.br/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://asabrancapharma.com.br/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="60x60"
+      href="https://asabrancapharma.com.br/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="120x120"
+      href="https://asabrancapharma.com.br/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="76x76"
+      href="https://asabrancapharma.com.br/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="https://asabrancapharma.com.br/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://asabrancapharma.com.br/favicon-196x196.png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://asabrancapharma.com.br/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://asabrancapharma.com.br/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://asabrancapharma.com.br/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://asabrancapharma.com.br/favicon-128.png"
+      sizes="128x128"
+    />
+    <meta name="application-name" content="Asa Branca Pharma" />
+    <meta name="msapplication-TileColor" content="#091C5E" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://asabrancapharma.com.br/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="https://asabrancapharma.com.br/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="https://asabrancapharma.com.br/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="https://asabrancapharma.com.br/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="https://asabrancapharma.com.br/mstile-310x310.png"
+    />
 
-<head>
+    <title>{title}</title>
 
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://asabrancapharma.com.br/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://asabrancapharma.com.br/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://asabrancapharma.com.br/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://asabrancapharma.com.br/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://asabrancapharma.com.br/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://asabrancapharma.com.br/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://asabrancapharma.com.br/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://asabrancapharma.com.br/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="https://asabrancapharma.com.br/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="https://asabrancapharma.com.br/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="https://asabrancapharma.com.br/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="https://asabrancapharma.com.br/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="https://asabrancapharma.com.br/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="Asa Branca Pharma"/>
-<meta name="msapplication-TileColor" content="#091C5E" />
-<meta name="msapplication-TileImage" content="https://asabrancapharma.com.br/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="https://asabrancapharma.com.br/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="https://asabrancapharma.com.br/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="https://asabrancapharma.com.br/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="https://asabrancapharma.com.br/mstile-310x310.png" />
+    <SEO
+      image={asaBrancaLogoSEO}
+      title={"Asa Branca Pharma - Conheça nossa Farmácia em Cajazeiras/PB"}
+      description="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
+      siteName="Asa Branca Pharma"
+    />
+  </head>
 
-	<title>{title}</title>
-
-	<SEO image={asaBrancaLogoSEO} title={'Asa Branca Pharma - Conheça nossa Farmácia em Cajazeiras/PB'}
-		description="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
-		siteName="Asa Branca Pharma" />
-
-
-</head>
-
-<body>
-	<slot />
-</body>
-
+  <body>
+    <slot />
+  </body><style></style>
 </html>
-<style>
-
-</style>
