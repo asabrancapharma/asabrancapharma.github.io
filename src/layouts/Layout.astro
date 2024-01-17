@@ -160,10 +160,12 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
   :root {
-    --primary-color: #3498db; /* a shade of blue */
-    --secondary-color: #2ecc71; /* a shade of green */
-    --background-color: #ecf0f1; /* a light gray */
+    --primary-color: #ecf0f1; /* a shade of blue */
+    --secondary-color: #5bc500; /* a shade of green */
+    --background-color: #091c60; /* a light gray */
     --text-color: #2c3e50; /* a dark gray for text */
     --error-color: #e74c3c; /* a shade of red for errors */
     --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -186,15 +188,17 @@ const { title } = Astro.props;
     margin: 0;
   }
 
-  :global(h1) {
+  h1 {
     font-size: var(--font-size-xl);
+    font-family: "Bruno Ace", sans-serif;
   }
 
-  :global(h2) {
+  h2 {
     font-size: var(--font-size-lg);
+    font-family: "Bruno Ace", sans-serif;
   }
 
-  :global(code) {
+  code {
     font-family:
       Menlo,
       Monaco,
@@ -209,11 +213,17 @@ const { title } = Astro.props;
   body,
   html {
     color: #cccccc;
-    background-color: #091c60;
-  }
-
-  a:hover {
-    color: #939aff;
+    background-color: var(--background-color);
+    font-family:
+      "Roboto",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      "Helvetica Neue",
+      sans-serif;
   }
 
   header {
