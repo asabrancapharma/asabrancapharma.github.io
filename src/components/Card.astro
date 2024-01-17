@@ -7,7 +7,7 @@ export interface Props {
   href: string;
   title: string;
   iconAlt: string;
-  iconType?: string;
+  iconType?: "img" | "svg" | "icon";
   iconComponent?: ComponentInstance;
   [key: string]: any;
 }
@@ -30,8 +30,10 @@ const {
   {...other}
 >
   {
-    iconType === "img" ? (
-      <Image src={icon} alt="{iconAlt}" class="icon" />
+    iconType === "svg" ? (
+      <img src={icon.src} alt={iconAlt} class="icon" />
+    ) : iconType === "img" ? (
+      <Image src={icon} alt={iconAlt} class="icon" />
     ) : (
       <Icon name={icon} class="icon" />
     )
