@@ -1,42 +1,43 @@
 ---
-const ano = (new Date()).getFullYear();
+const ano = new Date().getFullYear();
 ---
 
 <footer>
-    <div>
-        <p>
-            Asa Branca Pharma | © {ano} Todos os direitos reservados.
-        </p>
-        <p>
-            Horário de Funcionamento: De Segunda à Sábado das 8 às 19 horas e Domingo de 08 às 12 horas e 16 às 19 horas
-        </p>
-        <p>
-            Endereco: Avenida Joca Claudino, 383, Sala A - Bairro Tancredo Neves, Cajazeiras - PB - Cep 58900-000
-        </p>
-        <p>
-            As promoções expostas nesse site são válidas por tempo determinado ou enquanto durar o estoque.
-        </p>
-    </div>
+  <div>
+    <p>
+      Asa Branca Pharma | © {ano} Todos os direitos reservados.
+    </p>
+    <p>
+      Horário de Funcionamento: De Segunda à Sábado das 8 às 19 horas e Domingo
+      de 08 às 12 horas e 16 às 19 horas
+    </p>
+    <p>
+      Endereco: Avenida Joca Claudino, 383, Sala A - Bairro Tancredo Neves,
+      Cajazeiras - PB - Cep 58900-000
+    </p>
+    <p>
+      As promoções expostas nesse site são válidas por tempo determinado ou
+      enquanto durar o estoque.
+    </p>
+  </div>
 </footer>
 
 <style>
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    footer>div {
+  footer > div {
+    font-size: 0.7rem;
+    margin: 0;
+    padding-bottom: 20px;
+    max-width: 80vw;
+  }
 
-        font-size: 0.7rem;
-        margin: 0;
-        padding-bottom: 20px;
-        max-width: 80vw;
-    }
-
-    footer>div>p {
-        text-align: center;
-        margin: 2px 0;
-
-    }
+  footer > div > p {
+    text-align: center;
+    margin: 2px 0;
+  }
 </style>

@@ -1,84 +1,65 @@
 ---
-import { Icon } from "astro-icon";
-
+import type { ComponentInstance } from "astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 export interface Props {
-	icon: any;
-	href: string;
-	title: string;
-	iconAlt: string;
-	iconType?: string;
-	[key: string]: any;
+  icon?: any;
+  href: string;
+  title: string;
+  iconAlt: string;
+  iconType?: string;
+  iconComponent?: ComponentInstance;
+  [key: string]: any;
 }
-const { icon, href, title, iconAlt, iconType = 'img', ...other } = Astro.props;
+const {
+  icon,
+  href,
+  title,
+  iconAlt,
+  iconType = "img",
+  iconComponent,
+  ...other
+} = Astro.props;
 ---
 
-<li class="Card row">
-	{iconType==="img" ?
-	<img class="icon" src={icon} alt={iconAlt} /> :
-	<Icon name={icon} class="icon" />}
-	<a href={href} {...other}>{title}</a>
+<li
+  class="flex flex-nowrap py-2 px-3 m-2 justify-center items-center bg-white rounded-xl text-sm text-slate-700 hover:shadow-lg transform transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer"
+>
+  {
+    iconType === "img" ? (
+      <Image src={icon} alt="{iconAlt}" class="icon" />
+    ) : (
+      <Icon name={icon} class="icon" />
+    )
+  }
+  <a
+    href={href}
+    {...other}
+    class="text-slate-700 hover:text-slate-700"
+    target="_blank"
+    rel="noopener noreferrer">{title}</a
+  >
 </li>
 <style>
-	:root {
-		--link-gradient: linear-gradient(45deg, #4f39fa, #da62c4 30%, var(--color-border) 60%);
-	}
+  :root {
+    --link-gradient: linear-gradient(
+      45deg,
+      #4f39fa,
+      #da62c4 30%,
+      var(--color-border) 60%
+    );
+  }
+  .icon {
+    @apply mr-2;
+  }
 
-	.Card {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin: 10px;
-	}
+  [astro-icon] {
+    fill: #ffffff;
+  }
 
-	.Card>a {
-		color: var(--text-color);
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1em 1.3em;
-	}
-
-	.Card.row {
-		display: flex;
-		flex-direction: row;
-	}
-
-	.Card .icon {
-		margin: 10px;
-	}
-
-
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.15rem;
-		background-image: var(--link-gradient);
-		background-size: 400%;
-		border-radius: 0.5rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.link-card>a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1em 1.3em;
-		border-radius: 0.35rem;
-
-		background-color: #ffffff;
-		opacity: 0.8;
-	}
-
-	[astro-icon] {
-
-		fill: #ffffff;
-	}
-
-	[astro-icon="mdi:instagram"] {
-		fill: #ffffff;
-		height: 55px;
-		width: 55px;
-	}
+  [astro-icon="mdi:instagram"] {
+    fill: #ffffff;
+    height: 55px;
+    width: 55px;
+  }
 </style>

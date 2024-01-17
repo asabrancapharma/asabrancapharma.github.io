@@ -5,36 +5,41 @@ import Mapa from "../components/Mapa.astro";
 import Oferta from "../components/Oferta/Oferta.astro";
 import Header from "../components/Header/Header.astro";
 import Footer from "../components/Footer/Footer.astro";
+import LogoWhatsapp from "../images/logo-whatsapp2.svg";
+import LogoPhone from "../images/phone-alt-solid.svg";
+import LogoInstagram from "../images/instagram-logo.svg";
 ---
 
 <Layout title="Asa Branca Pharma">
-  <Header />
-  <main>
-    <!-- <Oferta /> -->
-    <Card
-      icon="images/logo-whatsapp2.svg"
-      iconAlt="Logo WhatsApp"
-      href="https://wa.me/558391543997"
-      title="Faça seu pedido pelo WhatsApp"
-    />
-    <Card
-      icon="images/phone-alt-solid.svg"
-      iconAlt="Logo Telefone"
-      href="tel:83 99154-3997"
-      title="Ligue para (83) 99154-3997"
-    />
-    <Card
-      icon="images/instagram-logo.svg"
-      iconType="img"
-      iconAlt="Whatsapp"
-      href="https://instagram.com/asabrancapharma"
-      title="Acesse nosso Instagram"
-      rel="nofollow"
-      target="_blank"
-    />
-    <Mapa />
-  </main>
-  <Footer />
+  <div class="flex flex-col h-screen">
+    <Header />
+    <main class="flex-grow">
+      <!-- <Oferta /> -->
+      <Card
+        icon={LogoWhatsapp}
+        iconAlt="Logo WhatsApp"
+        href="https://wa.me/558391543997"
+        title="Faça seu pedido pelo WhatsApp"
+      />
+      <Card
+        icon={LogoPhone}
+        iconAlt="Logo Telefone"
+        href="tel:83 99154-3997"
+        title="Ligue para (83) 99154-3997"
+      />
+      <Card
+        icon={LogoInstagram}
+        iconType="img"
+        iconAlt="Instagram"
+        href="https://instagram.com/asabrancapharma"
+        title="Acesse nosso Instagram"
+        rel="nofollow"
+        target="_blank"
+      />
+      <Mapa />
+    </main>
+    <Footer />
+  </div>
 </Layout>
 
 <style>

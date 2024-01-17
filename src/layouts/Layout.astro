@@ -1,21 +1,84 @@
 ---
-import SEO from "@julian_cataldo/astro-seo/SEO.astro";
 import "./Layout.css";
 import asaBrancaLogoSEO from "./asabrancapharma-logo3.png";
 export interface Props {
   title: string;
 }
 
-const { title } = Astro.props as Props;
+const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+
+    <link rel="canonical" href="https://asabrancapharma.com.br" />
+
+    <title>{title}</title>
+
+    <!-- Other head elements -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
+    />
+    <meta
+      name="keywords"
+      content="farmácia, Asa Branca Pharma, medicamentos, saúde, Cajazeiras, Paraíba, entrega farmácia, farmácia perto do CAIC, farmácia Cajazeiras, compras"
+    />
+    <meta name="telephone" content="+558391543997" />
+    <meta
+      name="address"
+      content="Avenida Joca Claudino, 383, Sala A - Bairro Tancredo Neves, Cajazeiras - PB, 58900-000"
+    />
+    <meta name="city" content="Cajazeiras" />
+    <meta name="state" content="Paraíba" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asabrancapharma.com.br" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
+    />
+    <meta property="og:image" content={asaBrancaLogoSEO.src} />
+    <meta property="og:site_name" content={title} />
+
+    <!-- Microsoft Tiles -->
+    <meta name="application-name" content="Asa Branca Pharma" />
+    <meta name="msapplication-TileColor" content="#091C5E" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://asabrancapharma.com.br/mstile-144x144.png"
+    />
+    <meta
+      name="msapplication-square70x70logo"
+      content="https://asabrancapharma.com.br/mstile-70x70.png"
+    />
+    <meta
+      name="msapplication-square150x150logo"
+      content="https://asabrancapharma.com.br/mstile-150x150.png"
+    />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="https://asabrancapharma.com.br/mstile-310x150.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="https://asabrancapharma.com.br/mstile-310x310.png"
+    />
+
+    <!-- Apple Icons -->
     <link
       rel="apple-touch-icon-precomposed"
       sizes="57x57"
@@ -56,6 +119,8 @@ const { title } = Astro.props as Props;
       sizes="152x152"
       href="https://asabrancapharma.com.br/apple-touch-icon-152x152.png"
     />
+
+    <!-- Other Icons -->
     <link
       rel="icon"
       type="image/png"
@@ -86,40 +151,88 @@ const { title } = Astro.props as Props;
       href="https://asabrancapharma.com.br/favicon-128.png"
       sizes="128x128"
     />
-    <meta name="application-name" content="Asa Branca Pharma" />
-    <meta name="msapplication-TileColor" content="#091C5E" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://asabrancapharma.com.br/mstile-144x144.png"
-    />
-    <meta
-      name="msapplication-square70x70logo"
-      content="https://asabrancapharma.com.br/mstile-70x70.png"
-    />
-    <meta
-      name="msapplication-square150x150logo"
-      content="https://asabrancapharma.com.br/mstile-150x150.png"
-    />
-    <meta
-      name="msapplication-wide310x150logo"
-      content="https://asabrancapharma.com.br/mstile-310x150.png"
-    />
-    <meta
-      name="msapplication-square310x310logo"
-      content="https://asabrancapharma.com.br/mstile-310x310.png"
-    />
 
-    <title>{title}</title>
-
-    <SEO
-      image={asaBrancaLogoSEO}
-      title={"Asa Branca Pharma - Conheça nossa Farmácia em Cajazeiras/PB"}
-      description="Farmácia Asa Branca Pharma. Localizada próxima ao CAIC em Cajazeiras Paraíba. Faz entrega em toda Cajazeiras. Aqui você encontra os melhores preços com o melhor atendimento. Venha nos visitar!"
-      siteName="Asa Branca Pharma"
-    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
   </head>
 
   <body>
     <slot />
-  </body><style></style>
+  </body>
 </html>
+<style is:global>
+  :root {
+    --primary-color: #3498db; /* a shade of blue */
+    --secondary-color: #2ecc71; /* a shade of green */
+    --background-color: #ecf0f1; /* a light gray */
+    --text-color: #2c3e50; /* a dark gray for text */
+    --error-color: #e74c3c; /* a shade of red for errors */
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+
+    --color-text: hsl(12, 5%, 4%);
+    --color-bg: hsl(10, 21%, 95%);
+    --color-border: hsl(17, 24%, 90%);
+  }
+
+  html {
+    font-family: Roboto, system-ui, sans-serif;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  body {
+    margin: 0;
+  }
+
+  :global(h1) {
+    font-size: var(--font-size-xl);
+  }
+
+  :global(h2) {
+    font-size: var(--font-size-lg);
+  }
+
+  :global(code) {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  body,
+  html {
+    color: #cccccc;
+    background-color: #091c60;
+  }
+
+  a:hover {
+    color: #939aff;
+  }
+
+  header {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 10px 10px;
+  }
+
+  header img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
